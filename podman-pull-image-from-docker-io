@@ -1,0 +1,1 @@
+In order to pull images from Docker Hub using podman, the image name needs to be prefixed by the docker.io/ registry name.
