@@ -1,0 +1,2 @@
+sudo buildah rm --all
+sudo podman ps --all --storage
