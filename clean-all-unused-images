@@ -1,0 +1,2 @@
+podman container prune
+podman image prune
