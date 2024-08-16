@@ -1,0 +1,7 @@
+
+cmd: 
+kubectl get nodes -o=jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.nodeInfo.containerRuntimeVersion}{"\n"}{end}'
+
+echo:
+fedora  cri-o://1.31.0
+
