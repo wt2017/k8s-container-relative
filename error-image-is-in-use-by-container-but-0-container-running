@@ -1,2 +1,6 @@
+sudo buildah containers -a     -> Get all buildah containers, BUILDER column with "*" are the ones in building
+sudo buildah rm cf5fcb676ad2   -> Delete the buildah container which is building the concerned image
+
+Ps:
 sudo buildah rm --all
 sudo podman ps --all --storage
