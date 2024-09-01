@@ -1,0 +1,6 @@
+Because host has set the proxy but container hasn't.
+Commands to set proxy:
+
+export http_proxy=127.0.0.1:7890
+export https_proxy=127.0.0.1:7890
+
