@@ -1,0 +1,5 @@
+sudo gpasswd -a ${USER} docker
+sudo su
+su wyou
+sudo dnf install docker-compose
+
