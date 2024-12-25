@@ -1,2 +1,6 @@
-podman container prune
-podman image prune
+# clean unused images
+sudo podman container prune
+sudo podman image prune
+
+# clean <none> tagged images
+sudo podman images --filter "dangling=true" --quiet | xargs sudo podman rmi
