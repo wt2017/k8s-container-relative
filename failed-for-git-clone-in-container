@@ -1,7 +1,8 @@
 Because host has set the proxy but container hasn't.
-Commands to set proxy:
+Commands to set proxy:in container as,
 
 export http_proxy=127.0.0.1:7890
 export https_proxy=127.0.0.1:7890
 
-Please note: build -f Dockerfile is still working on host environment, so no need to set proxy duplicated.
+
+For sudo podman build -f Dockerfile, parameter --network=host is required to shared the host network to container image build process.
