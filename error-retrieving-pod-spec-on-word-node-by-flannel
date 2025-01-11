@@ -1,0 +1,2 @@
+It's mostly probably due to kube-proxy is not running.
+kube-proxy is the precondition for pods communication, including flannel which is finally used to provide pod network.
