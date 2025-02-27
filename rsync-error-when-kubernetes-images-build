@@ -1,0 +1,17 @@
+Issue:
+  ./build/release-images.sh 
+  +++ [0227 18:16:08] Verifying Prerequisites....
+  +++ [0227 18:16:08] Building Docker image kube-build:build-f2600502de-5-v1.31.0-go1.22.9-bullseye.0
+  +++ [0227 18:16:13] Syncing sources to container
+  @ERROR: chdir failed
+  rsync error: error starting client-server protocol (code 5) at main.c(1850) [sender=3.4.1]
+  !!! [0227 18:16:14] Call tree:
+  !!! [0227 18:16:14]  1: ./build/../build/common.sh:681 kube::build::rsync(...)
+  !!! [0227 18:16:14]  2: ./build/../build/common.sh:401 kube::build::sync_to_container(...)
+  !!! [0227 18:16:14]  3: ./build/release-images.sh:39 kube::build::build_image(...)
+
+Root Cause:
+  selinux blocks chdir operation
+
+Solution:
+  sudo setenforce 0
