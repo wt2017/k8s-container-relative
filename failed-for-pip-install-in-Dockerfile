@@ -1,0 +1,2 @@
+# add below env to set the mirror for China specific
+ENV PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
